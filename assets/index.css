@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------
+   目录页 · 编辑部存档样式
+   --------------------------------------------------------------- */
+
+/* ---------- 最新一期（开篇，不用卡片不用按钮） ---------- */
+.latest{padding:14px 0 34px;border-bottom:1px solid var(--ink)}
+.latest h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:38px;line-height:1.42;letter-spacing:.6px;font-weight:700;
+  margin:0 0 16px;color:var(--ink);
+}
+.latest h1 a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.latest .dek{font-size:16px;line-height:1.95;color:#4a473f;margin:0 0 22px;padding:0;border:none;max-width:760px}
+.latest .quote{
+  font-size:13px;color:var(--muted);line-height:1.9;margin:0 0 20px;
+  padding-left:14px;border-left:1px solid var(--hair2);max-width:700px;
+}
+.indices{display:flex;flex-wrap:wrap;gap:0 26px;font-size:13px;color:#4a473f;font-variant-numeric:tabular-nums}
+.indices span{white-space:nowrap}
+.indices b{font-weight:600;color:var(--ink);margin-right:7px;font-weight:400}
+.latest .more{display:inline-block;margin-top:22px;font-size:13.5px;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
+.latest .more:hover{color:var(--up);border-color:var(--up)}
+@media(max-width:640px){.latest h1{font-size:27px}.latest .dek{font-size:15px}}
+
+/* ---------- 存档 ---------- */
+.archive{margin-top:46px}
+.archive-h{
+  display:flex;align-items:baseline;gap:14px;margin:0 0 6px;
+  font-size:12px;letter-spacing:2.5px;color:var(--muted);
+}
+.archive-h::after{content:"";flex:1;height:1px;background:var(--hair);transform:translateY(-4px)}
+.year{
+  margin:34px 0 0;padding-bottom:9px;border-bottom:1px solid var(--hair);
+  font-family:"Songti SC","Source Han Serif SC",Georgia,serif;
+  font-size:14px;letter-spacing:2px;color:#3a3730;
+}
+.year em{font-style:normal;font-family:-apple-system,"PingFang SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.5px;margin-left:9px}
+
+.rows{list-style:none;margin:0;padding:0}
+.rows li{margin:0;padding:0;border-bottom:1px solid var(--hair);counter-increment:none}
+.rows li::before{content:none}
+.rows a{
+  display:grid;grid-template-columns:56px 40px minmax(0,1fr) auto;
+  align-items:baseline;gap:14px;padding:13px 2px;transition:background .12s;
+}
+.rows a:hover{background:#fcfbf8}
+.rows a:hover .t{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:var(--hair2)}
+.rows .d{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.rows .w{font-size:11.5px;color:#b3aea3}
+.rows .t{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:15.5px;line-height:1.6;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.rows .c{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.rows .c.up{color:var(--up)}
+.rows .c.down{color:var(--down)}
+.rows .closed .t{color:#8b887f}
+.rows .closed .tag{font-size:10.5px;color:#b3aea3;border:1px solid var(--hair2);padding:0 5px;margin-left:8px;vertical-align:1px;letter-spacing:1px}
+
+@media(max-width:640px){
+  .rows a{grid-template-columns:46px 1fr;gap:6px 10px;padding:12px 0}
+  .rows .t{grid-column:1 / -1;white-space:normal}
+  .rows .w{display:none}
+  .rows .c{grid-row:1;grid-column:2;justify-self:end}
+}
+
+/* 最新一期正文链接 */
+.latest .more{font-size:14px;letter-spacing:.5px}
+
+/* 目录页最新一期的情绪指标行 */
+.latest .tape-mood{margin-top:13px;padding:0;border-top:none}

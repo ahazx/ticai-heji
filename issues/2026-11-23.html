@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>端侧 AI 与物理 AI · 题材合集</title>
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+figure{margin:22px 0 30px}
+figure img{width:100%;max-width:100%;height:auto;display:block;border:1px solid var(--hair);border-radius:2px}
+figcaption{font-size:11.5px;color:var(--muted);letter-spacing:.4px;margin-top:9px;text-align:center}
+.keyline{margin:0 0 16px;padding:0 0 16px;border-bottom:1px solid var(--hair2);font-size:17px;line-height:1.85;color:var(--ink)}
+.keyline b{font-weight:700}
+</style>
+</head><body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="../index.html">题材合集</a>
+  <div class="mhmeta">2026-11-23 · 周一 · 第 001 篇</div>
+</div></header>
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">目 录</div><ol>
+  <li><a href="#sec0">一、核心结论</a></li>
+  <li><a href="#sec1">二、两个词各是什么</a></li>
+  <li><a href="#sec2">三、核心区别对照</a></li>
+  <li><a href="#sec3">四、概念定位图</a></li>
+  <li><a href="#sec4">五、第三个词：世界模型</a></li>
+  <li><a href="#sec5">六、两条产业链图</a></li>
+  <li><a href="#sec6">七、端侧 AI 产业链</a></li>
+  <li><a href="#sec7">八、物理 AI 产业链</a></li>
+  <li><a href="#sec8">九、交集区</a></li>
+  <li><a href="#sec9">十、三点提醒</a></li>
+</ol></nav>
+<article>
+  <div class="meta">2026年11月23日　周一 · 题材辨析</div>
+  <h1 class="hl">端侧 AI 与物理 AI：一个负责"算"、一个负责"动"——两个正交维度，两条产业链，一张交集图看懂</h1>
+  <p class="dek">物理 AI 让 AI 长出手脚、在真实世界干活；端侧 AI 把算力搬到本地设备、不依赖云端。两者不是一条轴的两端，而是两个正交维度。本篇用图 + 表格把概念、区别、产业链和交集标的一次讲清。</p>
+
+  <h2 id="sec0">一、核心结论</h2>
+  <p class="keyline"><b>物理 AI 负责"动"，端侧 AI 负责"算"。</b>端侧 AI 是相对"云侧 AI"的<b>部署位置</b>概念，物理 AI 是相对"数字 AI"的<b>作用对象</b>概念——一个物理 AI 系统往往跑在端侧算力上，但端侧 AI 不一定触发实体动作。两者交集（端侧物理 AI）正是价值最高的地方。</p>
+
+  <h2 id="sec1">二、两个词各是什么</h2>
+  <h3>端侧 AI（Edge AI / On-device AI）</h3>
+  <ul>
+    <li><strong>本质</strong>：把 AI 推理直接部署在手机、PC、眼镜、摄像头、车载芯片等本地终端，数据不必上传云端。</li>
+    <li><strong>追求</strong>：低延迟、可离线、隐私好、省带宽。摄像头本地识别缺陷弹窗、手机离线跑大模型都是典型——它只输出"判断"，<strong>不一定触发实体动作</strong>。</li>
+    <li><strong>成熟度</strong>：已形成稳定出货与收入，是当前硬件厂商基本盘；2026 年全球边缘 AI 市场约 300 亿美元。</li>
+  </ul>
+  <h3>物理 AI（Physical AI ≈ 具身智能）</h3>
+  <ul>
+    <li><strong>本质</strong>：让 AI 感知真实环境、理解物理规律（重力、摩擦、因果），并通过执行器在真实世界完成动作。</li>
+    <li><strong>追求</strong>："感知 → 推理 → 决策 → 动作 → 学习"完整闭环。机器人判断杯子会不会倒再调整抓取、智驾雨夜避让行人——它<strong>必须"动手"</strong>，技术门槛更高。</li>
+    <li><strong>成熟度</strong>：黄仁勋称"物理 AI 的 ChatGPT 时刻已到来"，预计 2040 年全球关联产业达 3.25 万亿美元（CAGR 47.2%）；目前仍处"从实验室走向工厂"的早期试点。</li>
+  </ul>
+
+  <h2 id="sec2">三、核心区别对照</h2>
+  <div class="tbl"><table><thead><tr><th>维度</th><th>端侧 AI（负责算）</th><th>物理 AI（负责动）</th></tr></thead><tbody>
+    <tr><td>本质问题</td><td>AI 在哪里算——本地 vs 云端</td><td>AI 作用于什么——物理世界 vs 数字世界</td></tr>
+    <tr><td>核心目标</td><td>本地完成推理，降延迟、保隐私</td><td>真实世界完成感知—决策—动作闭环</td></tr>
+    <tr><td>硬件形态</td><td>SoC + 存储 + 电池（手机/眼镜/PC）</td><td>机器人本体 + 关节模组 + 传感器 + 执行器</td></tr>
+    <tr><td>交互方式</td><td>屏幕、语音、触控——信息层面</td><td>机械臂移动、底盘导航——物理操作</td></tr>
+    <tr><td>产业链重心</td><td>存储、SoC、散热、电池</td><td>精密件、伺服、减速器、仿真软件</td></tr>
+    <tr><td>商业化阶段</td><td>AI 手机 / PC 已快速普及、业绩可验证</td><td>早期试点，约 2027 年批量落地预期</td></tr>
+    <tr><td>投资视角</td><td>存储需求、芯片国产替代、出货量</td><td>产业化进度、仿真设施、订单兑现</td></tr>
+  </tbody></table></div>
+  <blockquote><p><strong>关系一句话</strong>：端侧 AI 是物理 AI 的"神经与本地大脑"——机器人要毫秒级实时决策，不能等云端往返，所以对物理 AI 而言端侧算力几乎是刚需。反过来不成立：AI 手机本地生图是端侧 AI，却不是物理 AI。</p></blockquote>
+
+  <h2 id="sec3">四、概念定位图</h2>
+  <figure><img src="../assets/concept-matrix.png" alt="端侧AI与物理AI正交维度定位矩阵"><figcaption>图 1　横轴看"AI 作用于什么"，纵轴看"算力在哪算"；右下角为两者交集</figcaption></figure>
+  <p>端侧 AI = 下面一整行（本地算力）；物理 AI = 右边一整列（物理世界）；交集 = 右下角<b>机器人 / 智驾</b>，是两条产业链的价值交汇点。</p>
+
+  <h2 id="sec4">五、第三个词：世界模型</h2>
+  <p>这三个词常被一起提，是咬合的一条链。黄仁勋的框架里，AI 从"比特世界"走向"原子世界"需要三件事同时到位：</p>
+  <ol>
+    <li><strong>世界模型——AI 的脑内推演引擎</strong>：理解"世界如何运转"，预测"我这样做接下来会怎样"。大语言模型预测下一个 token，世界模型预测下一个状态。英伟达 Cosmos 3 是开放的物理 AI 基础模型。</li>
+    <li><strong>物理 AI——把智能装进实体</strong>：在真实世界感知—推理—行动—再学习，是最终"能干活"的系统，对应机器人、智驾、工业自动化。</li>
+    <li><strong>端侧 AI——实时安全的算力底座</strong>：把感知与策略模型部署到设备本地，让机器能实时、离线、安全决策。三者中落地最先、业绩最先兑现。</li>
+  </ol>
+  <p>整条链：世界模型在仿真里大规模训练 → 通过端侧 AI 把模型部署到真实设备 → 形成能在物理环境感知、推理、行动、再学习的物理 AI 系统。AWS 2026 年 10 月推出的 Physical AI Toolchain 就是打通这三步的产业尝试。</p>
+
+  <h2 id="sec5">六、两条产业链图</h2>
+  <figure><img src="../assets/industry-chain.png" alt="端侧AI与物理AI产业链上中下游对照"><figcaption>图 2　两条产业链上中下游对照（移动端友好单栏布局）</figcaption></figure>
+
+  <h2 id="sec6">七、端侧 AI 产业链</h2>
+  <div class="tbl"><table><thead><tr><th>环节</th><th>代表个股</th></tr></thead><tbody>
+    <tr><td>上游·芯片/存储</td><td>瑞芯微、恒玄科技、晶晨股份、全志科技、星宸科技、乐鑫科技、兆易创新、江波龙、佰维存储</td></tr>
+    <tr><td>中游·模组/声光学</td><td>移远通信、广和通、美格智能、歌尔股份、水晶光电、敏芯股份</td></tr>
+    <tr><td>下游·终端整机</td><td>立讯精密、华勤技术、传音控股、龙旗科技、亿道信息、漫步者、德赛西威</td></tr>
+    <tr><td>软件·OS/算法</td><td>中科创达、科大讯飞、虹软科技、润和软件、海天瑞声</td></tr>
+  </tbody></table></div>
+  <p>主控 SoC / NPU 是本地算力核心（瑞芯微是标杆）；端侧 AI 对 DRAM / NOR 存储需求增速显著高于其他赛道，是最强"卖铲"环节。<strong>成熟度</strong>：AI 手机 / PC 已快速普及，SoC 与存储厂商业绩可验证，确定性最高。</p>
+
+  <h2 id="sec7">八、物理 AI 产业链</h2>
+  <div class="tbl"><table><thead><tr><th>环节</th><th>代表个股</th></tr></thead><tbody>
+    <tr><td>上游·仿真/算力</td><td>索辰科技、凡拓数创、能科科技；工业富联、浪潮信息、寒武纪、中科曙光</td></tr>
+    <tr><td>中游·感知</td><td>奥比中光、柯力传感、凌云光、天准科技、禾赛科技</td></tr>
+    <tr><td>中游·执行</td><td>绿的谐波、汇川技术、拓普集团、三花智控、兆威机电、鸣志电器</td></tr>
+    <tr><td>下游·本体/场景</td><td>埃斯顿、优必选、宇树科技、新时达、德赛西威、科大讯飞</td></tr>
+  </tbody></table></div>
+  <p>仿真平台是物理 AI 的"训练场"；3D 视觉、六维力矩传感器是机器人"眼睛与触觉"，谐波减速器、伺服电机、丝杠是"关节与肌肉"。<strong>成熟度</strong>：仍处早期试点，商业化确定性低于端侧 AI，产业落地节奏是关键。</p>
+
+  <h2 id="sec8">九、交集区：卡位价值最高</h2>
+  <p>定位图右下角——本地实时决策 + 真实物理动作——是两条产业链的真正交汇，也是机构口中"卡位价值"最高的方向：</p>
+  <div class="tbl"><table><thead><tr><th>标的</th><th>卡位逻辑</th></tr></thead><tbody>
+    <tr><td>瑞芯微</td><td>AIoT SoC 在机器人、汽车电子、机器视觉等端侧场景高速增长，新一代端侧协处理器支持更大参数模型——物理 AI 的"本地大脑"</td></tr>
+    <tr><td>中科创达</td><td>端侧 OS + 车载物理仿真算法，横跨两条链的软件底座</td></tr>
+    <tr><td>德赛西威</td><td>车载域控制器，既是端侧算力载体，也是车端物理感知核心</td></tr>
+    <tr><td>奥比中光</td><td>3D 视觉传感器已接入英伟达 Isaac Sim 仿真平台，感知层同时服务仿真训练与实体机器人</td></tr>
+  </tbody></table></div>
+
+  <h2 id="sec9">十、三点提醒</h2>
+  <ol>
+    <li><strong>看订单看出货，别只听概念</strong>——端侧 AI 的 SoC / 存储厂商业绩能验证，确定性高于仍在试点预期的物理 AI。</li>
+    <li><strong>交叉标的 ≠ 纯正标的</strong>——很多个股是被市场"贴标签"蹭上概念的，相关业务占比可能很小，追之前先确认主营是否真在这条链上。</li>
+    <li><strong>题材轮动快、波动大</strong>——空仓状态下，这类票要参与只做右侧确认、严格止损；看不懂就只观察。</li>
+  </ol>
+
+  <div class="source-notes"><blockquote>
+    <p>信息来源：新浪财经、雪球、萝卜投研及公开机构研报整理。个股为公开资料归类的市场概念标签，部分公司相关业务占比有限，产业链位置随业务变化可能调整。</p>
+    <p>本文仅供学习和研究参考，不构成任何投资建议。股市有风险，投资需谨慎。所有个股列举不作为买卖依据，据此操作风险自担。</p>
+  </blockquote></div>
+  <div class="pager"><a class="prev" href="../index.html"><span class="dir">返回</span>题材合集 · 存档</a></div>
+</article>
+</div></div>
+<footer class="foot"><div class="wrap">
+  <span>内容口径：公开资料整理 · 个股为市场概念归类 · 仅供学习研究</span>
+  <span>不构成投资建议 · 据此操作风险自担</span>
+</div></footer>
+</body></html>
